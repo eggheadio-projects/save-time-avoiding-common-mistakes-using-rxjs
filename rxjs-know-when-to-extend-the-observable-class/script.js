@@ -1,16 +1,16 @@
 class LogSubscriber extends Rx.Subscriber {
   next(value) {
-    console.log('next ' + value);
+    console.log('next ' + value) || displayInPreview('next ' + value);
     this._next(value);
   }
   
   error(e) {
-    console.log('error ' + e);
+    console.log('error ' + e) || displayInPreview('error ' + e);
     this._error(e);
   }
   
   complete() {
-    console.log('complete');
+    console.log('complete') || displayInPreview('complete');
     this._complete();
   }
 }
@@ -55,3 +55,12 @@ observable
   .subscribe(x => { alert(x); });
 
 
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}

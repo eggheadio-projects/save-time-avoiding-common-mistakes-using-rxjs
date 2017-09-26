@@ -14,7 +14,16 @@ const res$ = click$
   }));
 
 res$.subscribe(function (data) {
-  console.log(data.response);
+  console.log(data.response) || displayInPreview(data.response);
 });
 
 
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}

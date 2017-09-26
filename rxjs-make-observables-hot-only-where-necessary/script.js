@@ -11,7 +11,16 @@ const largeNum$ = randomNum$
   .filter(x => x > 50)
   .toArray();
 
-randomNum$.subscribe(x => console.log('random: ' + x));
-smallNum$.subscribe(x => console.log('small:', x));
-largeNum$.subscribe(x => console.log('large:', x));
+randomNum$.subscribe(x => console.log('random: ' + x) || displayInPreview('random: ' + x));
+smallNum$.subscribe(x => console.log('small:', x) || displayInPreview('smal:', x));
+largeNum$.subscribe(x => console.log('large:', x) || displayInPreview('larg:', x));
 
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}

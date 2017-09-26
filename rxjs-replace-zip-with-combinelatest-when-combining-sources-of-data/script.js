@@ -8,5 +8,15 @@ const volume$ = Rx.Observable
   );
 
 volume$.subscribe(function (volume) {
-  console.log(volume); 
+  console.log(volume) || displayInPreview(volume); 
 });
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
