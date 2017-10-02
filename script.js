@@ -11,9 +11,10 @@ const largeNum$ = randomNum$
   .filter(x => x > 50)
   .toArray();
 
-randomNum$.subscribe(x => console.log('random: ' + x) || displayInPreview('random: ' + x));
-smallNum$.subscribe(x => console.log('small:', x) || displayInPreview('smal:', x));
-largeNum$.subscribe(x => console.log('large:', x) || displayInPreview('larg:', x));
+  randomNum$.subscribe(x => console.log('random: ' + x) || displayInPreview('random: ' + x));
+  smallNum$.subscribe(x => console.log('small:', x) || displayInPreview('small:' + x));
+  largeNum$.subscribe(x => console.log('large:', x) || displayInPreview('large:' + x));
+  
 
 
 
