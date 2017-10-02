@@ -11,7 +11,7 @@ const resWhenClick$ = click$
 
 resWhenClick$.subscribe({
   next: function (data) {
-    console.log(data.response) || displayInPreview(data.response); 
+    console.log(data.response) || displayInPreview(data.response.name); 
   }
 });
 
