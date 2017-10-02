@@ -13,7 +13,7 @@ const res$ = resume$
   }));
 
 res$.subscribe(function (data) {
-  console.log(data.response)|| displayInPreview(data.response);
+  console.log(data.response)|| displayInPreview(data.response.company.bs);
 });
 
 resume$.next(false);
