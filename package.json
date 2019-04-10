@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "workspaces": ["lessons/*"],
+  "name": "save-time-avoiding-common-mistakes-using-rxjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "aux() { yarn workspace \"$(cd lessons && ls -d *\"$1\"* | head -1)\" start; }; aux"
+  },
+  "license": "MIT"
+}

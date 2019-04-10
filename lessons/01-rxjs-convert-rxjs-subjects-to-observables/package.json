@@ -1,0 +1,14 @@
+{
+  "name": "01-rxjs-convert-rxjs-subjects-to-observables",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./src/index.html"
+  },
+  "dependencies": {
+    "parcel": "^1.12.3",
+    "rxjs": "^6.4.0",
+    "rxjs-compat": "^6.4.0"
+  }
+}
